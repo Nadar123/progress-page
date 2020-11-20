@@ -1,0 +1,117 @@
+// out: ../../build/css/style.css, compress: false, sourceMap: true, autoprefixer: last 5 versions, groupmedia: true
+@import './var.scss';
+@import './mixin.scss';
+
+body {
+  @include body-container; 
+  .body-container {
+	
+		.dashboard-slide-item {
+			#slide-container.slide-container {
+        @include slide-container;
+        outline: none;
+        @media only screen and (max-width: 480px) {
+          flex-direction: column;
+        }
+			}
+    }
+    
+		.dashboard-years {
+			.slick-list.draggable {
+        padding: 36% 0 !important;
+        @media only screen and (max-width: 480px) {
+          padding: 10% 0 !important;
+        }
+			}
+			.dashboard-year-item.slick-slide {
+        outline: none;
+        text-align: center;
+        @media only screen and (max-width: 480px) {
+          background-color: black;
+        }
+				.year-wrapper {
+          @include year-wrapper;
+					span {
+					  @include span-item;
+            &:hover {
+              color: $gray-color;
+            }
+					}
+				}
+			}
+		}
+	}
+  .circles-wrapper {
+    @include circles-wrapper;
+
+    .circle-item {
+      margin: 0 1rem;
+      @media only screen and (max-width: 480px) {
+        margin: 0;
+      }
+      .circle-title {
+        @include circle-title; 
+        @media only screen and (max-width: 480px) {
+          transform: translate(0px, 85px);
+        }
+      }
+    }
+  }
+}
+
+.progressbars-wrapper {
+	column-count: 2;
+	margin-top: 2rem;
+
+	.progressbar-item {
+		@include progressbar-item;
+
+		.value {
+			transform: translate(-5rem, -1rem);
+		}
+
+		p {
+			@include flex-item; 
+			.item-title {
+				margin: 0 0rem 0 2rem;
+			}
+		}
+	}
+}
+
+.svg-circle {
+	circle {
+		@include circle;
+	}
+	.bar-circle {
+	 stroke: $circle-color;
+ }
+}
+.count-circle {
+  @include count-circle;
+  @media only screen and (max-width: 480px) {
+    // height: 166px;
+    // width: 166px;
+    margin: auto;
+  }
+		&:after {
+     @include count-circle-after;
+	}
+}
+progress[value] {
+	@include progress-value;
+}
+progress[value]::-webkit-progress-bar {
+  @include webkit-progress-bar; 
+}
+progress[value]::-webkit-progress-value {
+  @include progress-value-webkit-progress-value;
+}
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+.progress-bar {
+	@include progress-bar; 
+}
+.progress-inner::-webkit-progress-value {
+  @include progress-inner; 
+}

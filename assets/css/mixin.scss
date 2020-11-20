@@ -1,0 +1,100 @@
+@mixin body-container  {
+  background-color: $black-color;
+  height: 100vh;
+	padding: 10% 0; 
+}
+@mixin slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  outline: none;
+}
+@mixin flex-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline; 
+}
+@mixin year-wrapper {
+  width: 60%;
+  margin: auto;
+  cursor: pointer;
+}
+@mixin span-item {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 17px;
+  transition: color 0.2s;
+}
+@mixin circles-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+@mixin circle-title {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 500;
+  transform: translate(0px, 50%);
+}
+@mixin progressbar-item {
+  display: flex;
+  padding: 1rem;
+  max-width: 264px;
+}
+@mixin circle  {
+  stroke-dashoffset: 0;
+	transition: stroke-dashoffset 1s linear;
+	stroke: $stroke-color;
+	stroke-width: 1em;
+}
+@mixin webkit-progress-bar {
+  background-color: whiteSmoke;
+	border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+@mixin progress-value-webkit-progress-value {
+  position: relative;
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	animation: animate-stripes 5s linear infinite;
+}
+@mixin count-circle {
+  display: block;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 2em auto;
+  box-shadow: 0 0 1em black;
+  border-radius: 100%;
+}
+@mixin count-circle-after {
+  position: absolute;
+  display: block;
+  left: 37%;
+  top: 36%;
+  content: attr(data-pct)"%";
+  border-radius: 100%;
+  font-size: 2em;
+}
+@mixin progress-value {
+  appearance: none;
+	border: none;
+  height: 10px;
+  width: 11vw;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	position: relative; 
+}
+@mixin progress-bar  {
+  border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	width: 100%; 
+	height:10px;
+}
+@mixin progress-inner {
+  background-image:
+  -webkit-linear-gradient( 135deg,transparent,transparent 33%,rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+  -webkit-linear-gradient( top,	rgba(255, 255, 255, .25),rgba(0,0,0,.2)),
+  -webkit-linear-gradient( left, #09c, #f44);
+}
